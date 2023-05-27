@@ -1,0 +1,14 @@
+[package]
+name = "design_patterns_in_rust"
+version = "0.1.0"
+edition = "2021"
+authors = ["Progyan Bhattacharya <bprogyan@gmail.com>"]
+rust-version = "1.69.0"
+description = "Implementation of Design Patterns in Rust Language"
+repository = "https://github.com/The-Pro-Dev/Design-Patterns-in-Rust"
+readme = "README.md"
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
