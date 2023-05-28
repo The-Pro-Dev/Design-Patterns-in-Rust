@@ -1,3 +1,5 @@
+mod adapter_pattern;
+
 fn main() {
-    println!("Hello, world!");
+    adapter_pattern::adapter_pattern()
 }
