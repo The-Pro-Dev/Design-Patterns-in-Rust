@@ -1,11 +1,15 @@
 use crate::adapter_pattern::animal::AnimalAdapter;
 
 pub struct Dog {
-	pub name: String
+	name: String
 }
 
 impl Dog {
-  pub fn bark() -> String {
+  pub fn new(name: &str) -> Dog {
+    Dog{name: String::from(name)}
+  }
+
+  pub fn bark(&self) -> String {
     String::from("Bark!")
   }
 
@@ -15,7 +19,13 @@ impl Dog {
 }
 
 pub struct DogAdapter {
-	pub dog: Dog
+	dog: Dog
+}
+
+impl DogAdapter {
+  pub fn new(dog: Dog) -> DogAdapter {
+    DogAdapter { dog }
+  }
 }
 
 impl AnimalAdapter for DogAdapter {
@@ -28,6 +38,6 @@ impl AnimalAdapter for DogAdapter {
   }
 
   fn sound(&self) -> String {
-    Dog::bark()
+    Dog::bark(&self.dog)
   }
 }

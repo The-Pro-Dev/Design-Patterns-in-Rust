@@ -5,34 +5,34 @@ mod dog_test {
 
   #[test]
   fn dog_meow() {
-    let dog = Dog{name: String::from("Bruno")};
-    assert_eq!(dog.meow(), String::from("Bark!"));
+    let dog = Dog::new("Bruno");
+    assert_eq!(dog.bark(), String::from("Bark!"));
   }
 
   #[test]
   fn dog_name() {
-    let dog = Dog{name: String::from("Bruno")};
+    let dog = Dog::new("Bruno");
     assert_eq!(dog.name(), String::from("Bruno"));
   }
 
   #[test]
   fn dog_adapter_name() {
-    let dog = Dog{name: String::from("Bruno")};
-    let dog_adapter = DogAdapter{dog};
+    let dog = Dog::new("Bruno");
+    let dog_adapter = DogAdapter::new(dog);
     assert_eq!(dog_adapter.name(), String::from("Bruno"));
   }
 
   #[test]
   fn dog_adapter_kind() {
-    let dog = Dog{name: String::from("Bruno")};
-    let dog_adapter = DogAdapter{dog};
-    assert_eq!(dog_adapter.kind(), String::from("cat"));
+    let dog = Dog::new("Bruno");
+    let dog_adapter = DogAdapter::new(dog);
+    assert_eq!(dog_adapter.kind(), String::from("dog"));
   }
 
   #[test]
   fn dog_adapter_sound() {
-    let dog = Dog{name: String::from("Bruno")};
-    let dog_adapter = DogAdapter{dog};
+    let dog = Dog::new("Bruno");
+    let dog_adapter = DogAdapter::new(dog);
     assert_eq!(dog_adapter.sound(), String::from("Bark!"));
   }
 }

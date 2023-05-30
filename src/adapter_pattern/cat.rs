@@ -1,10 +1,14 @@
 use crate::adapter_pattern::animal::AnimalAdapter;
 
 pub struct Cat {
-	pub name: String
+	name: String
 }
 
 impl Cat {
+  pub fn new(name: &str) -> Cat {
+    Cat{name: String::from(name)}
+  }
+
   pub fn meow(&self) -> String {
     String::from("Meow!")
   }
@@ -15,7 +19,13 @@ impl Cat {
 }
 
 pub struct CatAdapter {
-	pub cat: Cat
+	cat: Cat
+}
+
+impl CatAdapter {
+  pub fn new(cat: Cat) -> CatAdapter {
+    CatAdapter { cat }
+  }
 }
 
 impl AnimalAdapter for CatAdapter {
