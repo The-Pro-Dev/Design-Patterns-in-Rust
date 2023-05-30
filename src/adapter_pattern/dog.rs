@@ -5,11 +5,11 @@ pub struct Dog {
 }
 
 impl Dog {
-  fn bark() -> String {
+  pub fn bark() -> String {
     String::from("Bark!")
   }
 
-  fn name(&self) -> String {
+  pub fn name(&self) -> String {
     self.name.to_owned()
   }
 }

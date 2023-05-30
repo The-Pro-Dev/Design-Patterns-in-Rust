@@ -5,11 +5,11 @@ pub struct Cat {
 }
 
 impl Cat {
-  fn meow() -> String {
+  pub fn meow(&self) -> String {
     String::from("Meow!")
   }
 
-  fn name(&self) -> String {
+  pub fn name(&self) -> String {
     self.name.to_owned()
   }
 }
@@ -28,6 +28,6 @@ impl AnimalAdapter for CatAdapter {
   }
 
   fn sound(&self) -> String {
-    Cat::meow()
+    Cat::meow(&self.cat)
   }
 }
