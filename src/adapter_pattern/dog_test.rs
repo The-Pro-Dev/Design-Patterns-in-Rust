@@ -4,7 +4,7 @@ mod dog_test {
   use crate::adapter_pattern::dog::{Dog, DogAdapter};
 
   #[test]
-  fn dog_meow() {
+  fn dog_bark() {
     let dog = Dog::new("Bruno");
     assert_eq!(dog.bark(), String::from("Bark!"));
   }
