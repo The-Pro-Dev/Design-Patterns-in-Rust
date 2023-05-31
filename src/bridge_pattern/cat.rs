@@ -1,6 +1,6 @@
 use once_cell::sync::Lazy;
 
-use crate::bridge_pattern::fur::Fur;
+use super::fur::Fur;
 
 pub struct Cat {
 	name: String,

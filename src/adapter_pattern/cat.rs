@@ -1,4 +1,4 @@
-use crate::adapter_pattern::animal::AnimalAdapter;
+use super::animal::AnimalAdapter;
 
 pub struct Cat {
 	name: String

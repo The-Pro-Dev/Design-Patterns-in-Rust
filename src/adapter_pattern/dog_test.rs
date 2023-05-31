@@ -1,7 +1,6 @@
 #[cfg(test)]
 mod dog_test {
-  use crate::adapter_pattern::animal::AnimalAdapter;
-  use crate::adapter_pattern::dog::{Dog, DogAdapter};
+  use crate::adapter_pattern::{animal::AnimalAdapter, dog::{Dog, DogAdapter}};
 
   #[test]
   fn dog_bark() {

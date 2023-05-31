@@ -1,6 +1,4 @@
-use crate::adapter_pattern::animal;
-use crate::adapter_pattern::cat;
-use crate::adapter_pattern::dog;
+use super::{animal, cat, dog};
 
 pub fn adapter_pattern() {
 	println!("** Adapter Pattern **");
@@ -14,4 +12,6 @@ pub fn adapter_pattern() {
 	let dog_adapter = dog::DogAdapter::new(dog);
 	let dog_sound = animal::sound(dog_adapter);
 	println!("{}", dog_sound);
+
+	println!()
 }

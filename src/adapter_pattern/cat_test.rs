@@ -1,7 +1,6 @@
 #[cfg(test)]
 mod cat_test {
-  use crate::adapter_pattern::animal::AnimalAdapter;
-  use crate::adapter_pattern::cat::{Cat, CatAdapter};
+  use crate::adapter_pattern::{animal::AnimalAdapter, cat::{Cat, CatAdapter}};
 
   #[test]
   fn cat_meow() {
