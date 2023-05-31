@@ -3,7 +3,7 @@ use super::{combo::details, combo_builder::{build_friendship_bucket, build_vegan
 pub fn builder_pattern() {
   println!("** Builder Pattern **");
 
-  let coupon10pctoff = Coupon::percent("Hot Wings Special (10% off over ₹100)", 0.1, Some(100.0));
+  let coupon10pctoff = Coupon::percent("Hot Wings Special (10% off over ₹100)", 10.0, Some(100.0));
   let mut friendship_bucket = build_friendship_bucket();
   friendship_bucket.apply_coupon(coupon10pctoff);
   let friendship_bucket_details = details(&friendship_bucket);

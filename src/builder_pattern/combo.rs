@@ -1,5 +1,7 @@
 use super::{coupon::Coupon, food_item::FoodItem};
 
+pub const NO_COUPON_CODE: &str = "No Coupon Applied";
+
 pub struct Combo {
   name: String,
   items: Vec<Box<dyn FoodItem>>,
@@ -28,7 +30,7 @@ impl Combo {
       return self.coupon.as_ref().unwrap().get_code()
     }
 
-    String::from("No Coupon Applied")
+    String::from(NO_COUPON_CODE)
   }
 
   pub fn get_items(&self) -> Vec<String> {

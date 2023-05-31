@@ -39,9 +39,9 @@ impl Coupon {
     }
 
     if self.kind == CouponKind::PercentDiscount {
-      return price * (1.0 - self.discount);
+      return price * (1.0 - self.discount * 0.01);
     }
 
-    price
+    panic!("Undefined behaviour")
   }
 }
