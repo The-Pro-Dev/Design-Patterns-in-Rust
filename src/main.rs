@@ -3,6 +3,7 @@ mod bridge_pattern;
 mod builder_pattern;
 mod command_pattern;
 mod decorator_pattern;
+mod facade_pattern;
 
 fn main() {
     adapter_pattern::adapter_pattern::adapter_pattern();
@@ -10,4 +11,5 @@ fn main() {
     builder_pattern::builder_pattern::builder_pattern();
     command_pattern::command_pattern::command_pattern();
     decorator_pattern::decorator_pattern::decorator_pattern();
+    facade_pattern::facade_pattern::facade_pattern();
 }
